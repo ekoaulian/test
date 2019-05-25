@@ -32,5 +32,7 @@ lalu SEND
 http://localhost:3000/api/mahasiswa_api_nilais/6
 
 Selamat mencoba wks~ 
+Cara pembuatan 
+https://hasil-ngampus.blogspot.com/2019/05/restful-api-nodejs.html
 
 
