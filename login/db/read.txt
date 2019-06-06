@@ -1,0 +1,1 @@
+buat database bernama mhs_crud kemudian insert lat_php(2).sql
