@@ -9,7 +9,7 @@ if($_POST['submit']){
 		$konfirmasi_password	= $_POST['konfirmasi_password'];
 		
 		$password	= md5($password);
-		$cek 			= $koneksi->query("SELECT `password` FROM user WHERE `password`='$password'");
+		$cek 			= $koneksi->query("SELECT `password` FROM user WHERE `password`='$password' and user_id = '".$_SESSION["user_id"]."' ");
 		
 		if($cek->num_rows){
 			if(strlen($password_baru) >= 5){
