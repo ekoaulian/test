@@ -8,6 +8,16 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  	
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+
 </head>
 <body>
 <div class="jumbotron text-center">
@@ -18,14 +28,16 @@
 <br/>
 <!-- <a href="v_add_mahasiswa.php">Tambah Mahasiswa</a> -->
 <a href="v_add_mahasiswa.php" class="btn btn-success" role="button">Tambah Mahasiswa</a><br/><br/>
-	<table class="table table-hover">
+	<table id="example" class="table table-striped table-bordered" style="width:100%">
+		<thead>
 		<tr>
-			<td>Id Mahasiswa(NIM)</td>
-			<td>Nama Mahasiswa</td>
-			<td width="200">Jurusan</td>
-			<td>Jenis Kelamin</td>
-			<td>Aksi</td>
+			<th>Id Mahasiswa(NIM)</th>
+			<th>Nama Mahasiswa</th>
+			<th width="200">Jurusan</th>
+			<th>Jenis Kelamin</th>
+			<th>Aksi</th>
 		</tr>
+		</thead>
 		<?php
 		include 'koneksi.php';
 		$data = mysqli_query($koneksi, "select * from mahasiswa where is_active = 1");
@@ -59,5 +71,11 @@
 		?>
 	</table>
 </div>
+
 </body>
+<script>
+	$(document).ready(function() {
+    $('#example').DataTable();
+} );
+</script>
 </html>
