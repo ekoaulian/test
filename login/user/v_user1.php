@@ -5,6 +5,7 @@
 session_start();
 if ($_SESSION['username']=='') {
   header('location:../admin/login.php');
+
   
 }else{
 
@@ -12,19 +13,16 @@ if ($_SESSION['username']=='') {
   $user_id = $_SESSION["user_id"];  
   $level = $_SESSION["level"];
 
- 
 ?>
-<body>
     <?php include '../home/sidebar.php'; ?>
-        Master User
-            <a href="../user/v_add_user.php">Tambah</a><br/>
-                    <table border="3">
+
+    Master User
+                <a href="../user/v_add_user.php">Tambah</a><br/><br/>
+                    <table>
                         <thead>
                             <th>User Id</th>
                             <th>Nama</th>
-                            <th>Email</th>
                             <th>Username</th>
-                            <th>Password</th>
                             <th>Hak Akses</th>
                             <th>Aksi</th>
                         </thead>
@@ -37,13 +35,11 @@ if ($_SESSION['username']=='') {
                             <tr>
                                 <td><?php echo $d['user_id']; ?></td>
                                 <td><?php echo $d['nama']; ?></td>
-                                <td><?php echo $d['email']; ?></td>
                                 <td><?php echo $d['username']; ?></td>
-                                <td><?php echo md5($d['password']); ?></td>
                                 <td><?php echo $d['level']; ?></td>
                                 <td>
-                                    <a href="v_edit_user.php?user_id=<?php echo $d['user_id']; ?>" class="btn btn-warning">Edit</a> ||
-                                    <a href="action_delete_user.php?user_id=<?php echo $d['user_id']; ?>" class="btn btn-danger">Hapus</a>
+                                    <a href="v_edit_user.php?user_id=<?php echo $d['user_id']; ?> ">Edit</a> ||
+                                    <a href="action_delete_user.php?user_id=<?php echo $d['user_id']; ?> ">Hapus</a>
                                 </td>
                             </tr>
                             <?php
@@ -54,9 +50,11 @@ if ($_SESSION['username']=='') {
                 </div>
             </div>
         </section><br>
+      </div>
+    </div>
+  </div>
 </body>
-<?php include '../home/footer.php'; ?>
 </html>
 <?php
 }
-?> 
+?>

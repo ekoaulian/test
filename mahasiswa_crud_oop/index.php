@@ -8,7 +8,7 @@
  //    	echo $data['alamat_mahasiswa']."<br>";
  //    }
 
-    // $create = $db->create('mahasiswa', ['nama_mahasiswa' => 'Eko Aulian', 'jurusan_mahasiswa' => 'Sistem informasi','alamat_mahasiswa' => 'Cikupa']);
+    // $create = $db->create('mahasiswa', ['nama_mahasiswa' => 'Rohman', 'jurusan_mahasiswa' => 'Manajement','alamat_mahasiswa' => 'Curug']);
     // if($create)
     // {
     // 	echo "berhasil";
