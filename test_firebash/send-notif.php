@@ -9,7 +9,7 @@ $auth = '';
 $param['to'] = $data['token_firebase'];
 $param['notification'] = [
     'title' => 'Ping!!',
-    'body' => 'notif by firebash Selamat Malam Eko'
+    'body' => 'notif by firebash Siang Eko'
 ];
 
 curl_setopt_array($curl, array(

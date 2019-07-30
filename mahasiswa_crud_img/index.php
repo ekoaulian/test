@@ -39,6 +39,7 @@
 			<td>
 				<a href="v_edit_mahasiswa.php?mahasiswa_id=<?php echo $d['mahasiswa_id']; ?>">edit</a> || 
 				<a href="action_delete_mahasiswa.php?mahasiswa_id=<?php echo $d['mahasiswa_id']; ?>">delete</a>
+				<a href="action_delete_permanen.php?mahasiswa_id=<?php echo $d['mahasiswa_id']; ?>">delete permanen</a>
 			</td>
 		</tr>
 		
