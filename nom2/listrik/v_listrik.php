@@ -22,11 +22,11 @@
 				?>
 			<tr>
 				<!-- <td><?php echo $no++; ?></td> -->
-				<td><?php echo $d['listrik_id']; ?></td>
-				<td><?php echo $d['listrik_name']; ?></td>
+				<td><?php echo $d['menu_id']; ?></td>
+				<td><?php echo $d['nama_menu']; ?></td>
 				<td>
-					<a href="v_edit_listrik.php?listrik_id=<?php echo $d['listrik_id']; ?>" >Edit</a> ||
-					<a href="action_delete_listrik.php?listrik_id=<?php echo $d['listrik_id']; ?>"> Hapus</a>
+					<a href="#" >Edit</a> ||
+					<a href="#"> Hapus</a>
 	            </td>
 			</tr>
 				<?php 

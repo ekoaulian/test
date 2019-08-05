@@ -11,7 +11,7 @@ Tambah Peralatan Listrik
   </div>
   <div class="form-group">
   <label for="listrik_name">Name Peralatan Listrik</label>
-  <input type="text" name="listrik_name" required>
+  <input type="text" name="nama_menu" required>
   </div>
   <button type="submit">Simpan</button>
   <a href="v_listrik.php">Batal</a>

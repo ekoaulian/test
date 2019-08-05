@@ -9,28 +9,28 @@ Form Monitoring
     <input type="text" name="tanggal" readonly value="<?php echo date('d-M-Y'); ?>">
 
 <table border="2">
-    <h2>Peralatan Listrik Bandar Udara Trunojoyo</h2>
+    <h2>test</h2>
     <label for="teknisi">Nama Teknisi</label>
-    <select name="teknisi_id_listrik" required>
+    <select name="toko_id_menu" required>
 
     <?php
     include '../config/koneksi.php';
     $data=mysqli_query($koneksi,"select * from toko where is_active = 1");
     while($d=mysqli_fetch_array($data)) { ?>
-    <option value="<?php echo $d['teknisi_id']; ?>"><?php echo $d['teknisi_name']; ?></option>
+    <option value="<?php echo $d['toko_id']; ?>"><?php echo $d['nama_toko']; ?></option>
     <?php
     } ?>
     </select>
 
     <br/>
-    <label for="listrik">Personil Stanby</label>
-    <input type="number" name="listrik_personil" id="listrik_personil" required>
+    <label>Personil Stanby</label>
+    <input type="number" name="judul_artikel" id="judul_artikel" required>
 
     <thead>
         <tr>
             <th scope="col"></th>
-            <th scope="col">Serviceable</th>
-            <th scope="col">Unserviceable</th>
+            <th scope="col">Tersedia</th>
+            <th scope="col">Tidak Tersedia</th>
             <th scope="col">Keterangan</th>
         </tr>
     </thead>
@@ -43,17 +43,17 @@ Form Monitoring
         ?>
 
         <tr>
-        <th><?php echo $d['listrik_name']; ?></th>
+        <th><?php echo $d['nama_menu']; ?></th>
             <td>
-                <input type="radio" name="listrik_status_<?= $no ?>" id="serviceable" value="<?= $d['listrik_id'] ?>:serviceable" >
+                <input type="radio" name="status_<?= $no ?>" id="tersedia" value="<?= $d['menu_id'] ?>:tersedia" >
             </td>
             
             <td>
-                <input class="form-check-input" type="radio" name="listrik_status_<?= $no ?>" id="unserviceable" value="<?= $d['listrik_id'] ?>:unserviceable">
+                <input class="form-check-input" type="radio" name="status_<?= $no ?>" id="tidak tersedia" value="<?= $d['menu_id'] ?>:tidak tersedia">
             </td>
 
             <td> 
-                <input type="text" name="listrik_keterangan_<?= $no ?>" id="listrik_keterangan_<?= $no ?>" required>  
+                <input type="text" name="deskripsi_<?= $no ?>" id="deskripsi_<?= $no ?>" required>  
             </td>
 
         </tr>

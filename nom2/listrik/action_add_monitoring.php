@@ -18,14 +18,14 @@ $id = (empty($data)) ? 1 : intval($data['id']) + 1;
 
 if(isset($_POST))
 {
-	//listrik
+	//menu
 	$sqlelb = "SELECT count(*) as jumlah FROM menu";
 	$selectelb = mysqli_query($koneksi, $sqlelb);
 	$dataelb = mysqli_fetch_assoc($selectelb);
-	//personil listrik
-	$listrikPerso = $_POST['listrik_personil'];
-	//teknisi listrik
-	$teknisilistrik = $_POST['teknisi_id_listrik'];
+	//personil menu
+	$menuPerso = $_POST['judul_artikel'];
+	//toko menu
+	$tokomenu = $_POST['toko_id_menu'];
 	//validasi_date
 	$date_validasi = "SELECT tanggal FROM artikel where date(tanggal) = date('$myDate')";
 	$query_dv = mysqli_query($koneksi,$date_validasi) or die (msql_error());
@@ -38,12 +38,12 @@ if(isset($_POST))
 			
 	for($b = 0; $b < $dataelb['jumlah']; $b++)
 	{
-		if(!empty($_POST['listrik_status_'.$b]))
+		if(!empty($_POST['status_'.$b]))
 		{
-			$listrik = explode(':', $_POST['listrik_status_'.$b]);
-			$listrik_ket = $_POST['listrik_keterangan_'.$b];
+			$menu = explode(':', $_POST['status_'.$b]);
+			$menu_ket = $_POST['deskripsi_'.$b];
 
-			mysqli_query($koneksi, "INSERT INTO artikel(id,listrik_id,tanggal,listrik_personil,teknisi_id,listrik_status,listrik_keterangan) values($id, $listrik[0], '$myDate', $listrikPerso,$teknisilistrik, '$listrik[1]','$listrik_ket')");
+			mysqli_query($koneksi, "INSERT INTO artikel(id,menu_id,tanggal,judul_artikel,toko_id,status,deskripsi) values($id, $menu[0], '$myDate', $menuPerso,$tokomenu, '$menu[1]','$menu_ket')");
 		}
 	}
 
