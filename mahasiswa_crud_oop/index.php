@@ -1,39 +1,38 @@
-<?php
-    require_once('config/database.php');
+<!DOCTYPE html>
+<html>
+<head>
+	<title>oop</title>
+</head>
+<body>
 
-	// foreach($db->get('mahasiswa') as $data)
- //    {
- //    	echo $data['nama_mahasiswa']."<br>";
- //    	echo $data['jurusan_mahasiswa']."<br>";
- //    	echo $data['alamat_mahasiswa']."<br>";
- //    }
+<h2>Lat oop</h2>
+<hr>
+<a href="v_create.php">create</a>
+<br/>
+<table border="2">
+	<thead>
+		<th>Nama</th>
+		<th>Jurusan</th>
+		<th>Alamat</th>
+		<th>Aksi</th>
+	</thead>
+	<?php
+	    require_once('config/database.php');
 
-    // $create = $db->create('mahasiswa', ['nama_mahasiswa' => 'Rohman', 'jurusan_mahasiswa' => 'Manajement','alamat_mahasiswa' => 'Curug']);
-    // if($create)
-    // {
-    // 	echo "berhasil";
-    // }
-    // else {
-    // 	echo "gagal";
-    // }
+	    foreach($db->get('mahasiswa') as $data)
+	    {
+    ?>
+    	<tr>
+    	<td><?= $data['nama_mahasiswa'] ?></td>
+    	<td><?= $data['jurusan_mahasiswa'] ?></td>
+    	<td><?= $data['alamat_mahasiswa'] ?></td>
+    	<td>
+    		<a href="v_edit.php?id_mahasiswa=<?= $data['id_mahasiswa'] ?>">edit</a> || 
+    		<a href="action_delete.php?id_mahasiswa=<?= $data['id_mahasiswa'] ?>">delete</a>
+    	</td>
+    	</tr>
+    <?php } ?>
+</table>
 
-    // $update = $db->update('mahasiswa', ['nama_mahasiswa' => 'Eko aulian s', 'jurusan_mahasiswa' => 'Akuntansi'], 'id_mahasiswa=1');
-
-    // if($update)
-    // {
-    // 	echo "berhasil";
-    // }
-    // else {
-    // 	echo "gagal";
-    // }
-
-    /*$delete = $db->delete('mahasiswa', 'id_mahasiswa=1');
-
-    if($delete)
-    {
-    	echo "berhasil";
-    }
-    else {
-    	echo "gagal";
-    }*/
-?>
+</body>
+</html>

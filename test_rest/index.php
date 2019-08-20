@@ -1,18 +1,10 @@
 <?php
-	
-	include 'config/koneksi.php';
 
-	@$nama_mahasiswa = agus;
-	@$jurusan_mahasiswa = Si;
-	@$alamat_mahasiswa = Rajeg;
-
-	$data = "INSERT INTO mahasiswa values('','$nama_mahasiswa','$jurusan_mahasiswa','$alamat_mahasiswa')";
-
-	if (mysqli_query($koneksi, $data)){
-		echo "Berhasil";
-	}else{
-		echo "Gagal";
+	if (include 'config/koneksi.php') {
+		 echo "terkoneksi" ;
 	}
+	
+	else
+		echo "Gagal konekasi";
 
-	mysqli_close($koneksi);
 ?>
