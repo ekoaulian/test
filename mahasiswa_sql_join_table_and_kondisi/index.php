@@ -51,11 +51,11 @@
 						<?php 
 						include 'koneksi.php';
 						$data = mysqli_query($koneksi,"
-select mhs.nama_mahasiswa,matkul.nama_matakuliah,n.nilai 
-from nilai as n 
-inner join matakuliah as matkul on matkul.id_matakuliah=n.id_matakuliah 
-inner join mahasiswa as mhs on mhs.id_mahasiswa=n.id_mahasiswa"
-);
+						select mhs.nama_mahasiswa,matkul.nama_matakuliah,n.nilai 
+						from nilai as n 
+						inner join matakuliah as matkul on matkul.id_matakuliah=n.id_matakuliah 
+						inner join mahasiswa as mhs on mhs.id_mahasiswa=n.id_mahasiswa"
+						);
 						while($d = mysqli_fetch_array($data)){
 						?>
 						<tr>
