@@ -11,7 +11,7 @@ const conn = mysql.createConnection({
   host: 'localhost',
   user: 'root',
   password: '',
-  database: 'mhs_crud'
+  database: 'test_api'
 });
 
 //connect to database

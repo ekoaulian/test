@@ -1,7 +1,7 @@
 <?php 
 
 // nama host, Username, password dan nama database
-$koneksi = mysqli_connect("localhost","root","","nilai_mhs");
+$koneksi = mysqli_connect("localhost","root","","test_nilai_mhs");
  
 // Check connection
 if (mysqli_connect_errno()){

@@ -1,7 +1,7 @@
 <?php
 
 //variable koneksi = (host, username, pasword, nama database)
-$koneksi = mysqli_connect("localhost","root","","mhs_crud_img");
+$koneksi = mysqli_connect("localhost","root","","test_crud_mhs2");
 
 //cek koneksi
 if (mysqli_connect_errno()) {

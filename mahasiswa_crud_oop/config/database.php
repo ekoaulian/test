@@ -11,7 +11,7 @@ class Database
 
     public function getConnection()
     {
-        $this->conn = mysqli_connect('localhost', 'root', '', 'lat_oop');
+        $this->conn = mysqli_connect('localhost', 'root', '', 'test_oop');
 
         if(mysqli_connect_error())
         {
