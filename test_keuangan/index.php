@@ -2,19 +2,16 @@
 <html>
 <head>
 	<title>test keuangan</title>
-	<meta charset="utf-8">
-  <!-- <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"> -->
   <?php include 'asset/css.php' ; ?>
   <link rel="stylesheet" type="text/css" href="asset/button_bulat.css">
  </head>
 <body>
-
+<?php include 'header.php' ; ?>
 <div class="container">
-	<h2>Keuangan</h2>
+  <h3>Wellcome </h3>
 	<hr>
-	<a href="view_tambah_saldo.php?id_saldo=1" class="btn btn-success" role="button"><span class="glyphicon glyphicon-plus"></span> Saldo</a>
+	<a href="view_tambah_saldo.php?id_saldo=1" class="btn btn-success" role="button"><span class="fa fa-fw fa-plus"></span> Saldo</a>
+	<a href="view_kurang_saldo.php?id_saldo=1" class="btn btn-success" role="button"><span class="fa fa-fw fa-minus"></span> Saldo</a>
 	<div class="alert alert-success">
 	<?php
 		include 'config/koneksi.php';

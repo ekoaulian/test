@@ -13,11 +13,11 @@
 
 	$id_saldo		= $_POST['id_saldo'];
 	$saldo			= $_POST['saldo'];
-	$total			= $saldo_awal + $saldo;
+	$total			= $saldo_awal - $saldo;
 	$sql	= "UPDATE saldo SET saldo = '$total' WHERE id_saldo = '$id_saldo' ";
 	if (mysqli_query($koneksi, $sql)) {
 		echo "<script>
-			alert('Saldo bertambah Rp. $saldo');
+			alert('Saldo berkurang Rp. $saldo');
 			document.location.href = 'index.php';
 			</script>"; 
 	} else {

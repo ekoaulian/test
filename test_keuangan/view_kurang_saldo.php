@@ -12,7 +12,7 @@
 <body>
 
 <div class="container">
-	<h2>Tambah saldo</h2>
+	<h2>Pakai saldo</h2>
 	<hr>
 	<div class="panel panel-default">
             <div class="panel-heading">
@@ -25,7 +25,7 @@
 			$data = mysqli_query($koneksi,"select * from saldo where id_saldo='$id_saldo'");
 			while($d = mysqli_fetch_array($data)){
 			?>
-            <form method="post" action="action_tambah_saldo.php">
+            <form method="post" action="action_kurang_saldo.php">
             	<input type="hidden" name="id_saldo" value="<?php echo $d['id_saldo']; ?>" >
                 <div class="form-group">
                     <label for="saldo">Saldo:</label>
@@ -35,7 +35,8 @@
                     <label for="keterangan">Keterangan:</label>
                     <textarea name="keterangan" class="form-control" autocomplete="off" placeholder="Masukkan keterangan" required></textarea>
                 </div> -->
-                <button type="submit" name="submit" class="btn btn-info">Tambah</button>
+                
+                <button type="submit" name="submit" class="btn btn-info">Kurang</button>
                 <a class="btn btn-danger" href="index.php">Batal</a>
             </form>
             <?php } ?>
