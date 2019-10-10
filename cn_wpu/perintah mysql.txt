@@ -1,0 +1,26 @@
+perintah mysql
+show databases;
+
+//agar rapi kesamping
+dir /w 
+
+masuk ke bin 
+ketik mysql -u root -p
+password dikosongkan saja
+use phpdasar
+-------------------------------------------------------------------------
+database name	: phpdasar
+tabel			: mahasiswa
+-------------------------------------------------------------------------
+id_mhs int primary key auto_increment
+nama	varchar(100)
+npm		varvhar(10)
+email	varchar(100)
+jurusan	varchar(100)
+gambar	varchar(100)
+
+//untuk membuat database
+create database phpdasar;
+
+//untuk membuat table
+create 
