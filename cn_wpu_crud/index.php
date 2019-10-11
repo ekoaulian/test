@@ -26,8 +26,9 @@ $mahasiswa = query("SELECT * FROM mahasiswa");
 		<tr>
 			<td><?= $i; ?></td>
 			<td>
-				ubah |
-				hapus
+				<a href="ubah.php?id_mahasiswa=<?= $m["id_mahasiswa"];?>">Ubah</a> 
+				|
+				<a href="hapus.php?id_mahasiswa=<?= $m["id_mahasiswa"];?>" onclick="return confirm('yakin?');">Hapus</a>
 			</td>
 			<td><img src="img/<?= $m["gambar"]; ?>" width="100"></td>
 			<td><?= $m["npm"]; ?></td>
