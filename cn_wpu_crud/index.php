@@ -1,6 +1,12 @@
 <?php 
 require 'configs/functions.php';
+//urutkan berdasarkan nama (ASC ada juga yang DESC)
+//$mahasiswa = query("SELECT * FROM mahasiswa ORDER BY nama ASC");
 $mahasiswa = query("SELECT * FROM mahasiswa");
+
+if( isset($_POST["cari"]) ) {
+	$mahasiswa = cari($_POST["keyword"]);
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -10,7 +16,12 @@ $mahasiswa = query("SELECT * FROM mahasiswa");
 <body>
 
 <h2>Mahasiswa</h2>
-	<a href="tambah.php">Tambah data mahasiswa</a> <br>
+	<a href="tambah.php">Tambah data mahasiswa</a> <br><br>
+	<form action="" method="post">
+		<input type="text" name="keyword" size="50" autofocus placeholder="masukkan keyword" autocomplete="off">
+		<button type="submit" name="cari">Cari</button>
+	</form> <br/>
+
 	<table border="1" cellpadding="10" cellspacing="0">
 		<tr>
 			<th>id</th>
