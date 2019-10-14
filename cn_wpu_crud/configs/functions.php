@@ -106,6 +106,14 @@
 		$password = mysqli_real_escape_string($koneksi, $data["password"]);
 		$password2 = mysqli_real_escape_string($koneksi, $data["password2"]);
 
+		$result = mysqli_query($koneksi, "SELECT username FROM user WHERE username = '$username' ");
+		if( mysqli_fetch_assoc($result) ){
+			echo "
+				<script> alert('username sudah terdaftar! ') </script>
+			     ";
+			return false;
+		}
+
 		// cek konfirmasi password
 		if( $password !== $password2 ) {
 			echo "
