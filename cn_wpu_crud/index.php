@@ -1,4 +1,10 @@
 <?php 
+session_start();
+if( empty($_SESSION["login"]) ){
+	header("Location: login.php");
+	exit;
+}
+
 require 'configs/functions.php';
 //urutkan berdasarkan nama (ASC ada juga yang DESC)
 //$mahasiswa = query("SELECT * FROM mahasiswa ORDER BY nama ASC");
@@ -14,7 +20,7 @@ if( isset($_POST["cari"]) ) {
 	<title>mahasiswa</title>
 </head>
 <body>
-
+<a href="logout.php">keluar</a>
 <h2>Mahasiswa</h2>
 	<a href="tambah.php">Tambah data mahasiswa</a> <br><br>
 	<form action="" method="post">
