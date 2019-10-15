@@ -32,7 +32,7 @@ $html = '
 $html .=
 	'<tr>
 	<td>' . $i++ . '</td>
-	<td><img src="img/ ' . $m["gambar"] . '" width="50"></td>
+	<td><img src="img/'.$m["gambar"] . '" width="50"></td>
 	<td>' . $m["npm"] . ' </td>
 	<td>' . $m["nama"] . ' </td>
 	<td>' . $m["email"] . ' </td>
