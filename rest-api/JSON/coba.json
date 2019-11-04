@@ -1,0 +1,30 @@
+[
+	{
+		"nama": "Eko aulian",
+		"umur": 22,
+		"npm": "2016804305",
+		"lulus":true,
+		"hobby": [
+			"coding",
+			"gaming"
+		],
+		"pembimbing":{
+			"pembimbing1":"agus",
+			"pembimbing2":"rohman"
+		}
+	},
+	{
+		"nama": "agus",
+		"umur": 29,
+		"npm": "2016804378",
+		"lulus":true,
+		"hobby": [
+			"coding",
+			"hacking"
+		],
+		"pembimbing":{
+			"pembimbing1":"ian",
+			"pembimbing2":"anis"
+		}
+	}
+]
